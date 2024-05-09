@@ -1,4 +1,4 @@
-package agentes;
+package modelo;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -48,11 +48,6 @@ public class Genetica {
         int [] Xy;
         for (int i = 0; i < numIteraccion; i++) {
             poblacion.evolve(numEvoluciones);
-//            System.out.println("----------------------");
-//            descomponerTodos(poblacion.getChromosomes());
-//            System.out.println("Mejor:");
-//            descomponerIndividuo(poblacion.getFittestChromosome());
-//            System.out.println("----------------------");
         }
         Xy = descomponerIndividuo(poblacion.getFittestChromosome());
         return Xy;
@@ -94,7 +89,6 @@ public class Genetica {
         if (sy == 0) {
             valY = -valY;
         }
-        //System.out.println(valX + "; " + valY);
         XY[0] = valX;
         XY[1] = valY;
         return XY;

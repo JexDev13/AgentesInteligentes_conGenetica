@@ -1,10 +1,9 @@
 package agentes;
 
+import modelo.Genetica;
 import jade.core.Agent;
-import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
-import modelo.Cliente;
 
 /**
  *
@@ -12,7 +11,6 @@ import modelo.Cliente;
  */
 public class Agente1 extends Agent {
 
-    private boolean bandera = true;
 
     @Override
     protected void setup() {
@@ -36,11 +34,6 @@ public class Agente1 extends Agent {
             
             //enviar al Agente 2
             Comunicacion.msj(ACLMessage.INFORM, getAgent(), "Ag2", X+";"+Y, null, "CD-01-02-AG");
-            /*System.out.println("CD-01-02");
-            System.out.println("Agente 1 y La edad es: 23");
-            System.out.println("--------------------------");
-            System.out.println(" ");
-            blockingReceive();*/
         }
 
         @Override

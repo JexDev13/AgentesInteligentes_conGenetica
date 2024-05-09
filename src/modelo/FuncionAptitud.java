@@ -1,4 +1,4 @@
-package agentes;
+package modelo;
 
 import org.jgap.FitnessFunction;
 import org.jgap.IChromosome;
